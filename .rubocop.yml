@@ -56,3 +56,4 @@ AllCops:
     - tmp/**/*
     - node_modules/**/*
     - bin/**/*
+    - lib/tasks/auto_annotate_models.rake
