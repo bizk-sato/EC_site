@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+環境構築
+
+$ docker-compose build
+$ docker-compose run --rm web rails webpacker:install
+$ docker-compose run --rm web rails webpacker:install:react
+$ docker-compose run --rm web rails generate react:install
+
+サーバー立ち上げ
+$ docker-compose up -d
