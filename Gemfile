@@ -40,6 +40,8 @@ gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem 'webpacker', '~> 4.x'
 gem 'react-rails'
+gem 'jquery-rails'
+gem "haml-rails", "~> 2.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
