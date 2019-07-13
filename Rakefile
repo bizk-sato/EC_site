@@ -9,9 +9,7 @@ Rails.application.load_tasks
 
 # db:migrate後にrails-erdをフックする
 Rake::Task['db:migrate'].enhance do
-  if Rails.env.development?
-    Rake::Task[:after_migrate].invoke
-  end
+  Rake::Task[:after_migrate].invoke if Rails.env.development?
 end
 
 # migrateの後のタスク
