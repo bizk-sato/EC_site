@@ -5,9 +5,9 @@ class CreateProducts < ActiveRecord::Migration[5.2]
     create_table :products do |t|
       t.string :name
       t.integer :price
-      t.text :desription
+      t.text :description
       t.integer :stock
-      t.category :references
+      t.references :category, index: true
 
       t.timestamps
     end

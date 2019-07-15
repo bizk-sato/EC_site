@@ -5,26 +5,27 @@ class MainContent extends React.Component {
   render () {
     return (
       <main>
-        <Card />
+        {this.props.items.map((item) =>
+          <Card item={item} key={item.id} />
+        )}
       </main>
     );
   }
 }
 
-function Card() {
+function Card(props) {
   return(
     <div className="row">
-      <div className="col s6 m9">
-        <h2 className="header">Recommandation</h2>
+      <div className="col s6 m9 offset-l1">
         <a href="#">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://lorempixel.com/100/190/nature/6" />
+              <img src="https://images-na.ssl-images-amazon.com/images/I/51aQGtXV0LL._SL1000_.jpg" />
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>Hatomugi genmai</p>
-                <p>2000円</p>
+                <p>{props.item.name}</p>
+                <p>{props.item.price}</p>
               </div>
             </div>
           </div>

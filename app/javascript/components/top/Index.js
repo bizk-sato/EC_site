@@ -8,7 +8,7 @@ class Index extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <MainContent />
+        <MainContent items={this.props.items}/>
       </React.Fragment>
     );
   }
