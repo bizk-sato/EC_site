@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 class MainContent extends React.Component {
   render () {
     return (
-      <React.Fragment>
+      <main>
         <Card />
-      </React.Fragment>
+      </main>
     );
   }
 }

@@ -7,7 +7,7 @@ import LowBar from "./LowBar"
 class Header extends React.Component {
   render () {
     return (
-      <React.Fragment>
+      <header>
         <nav className="nav-extended">
           <div className="nav-wrapper">
             <TopBar />
@@ -17,7 +17,7 @@ class Header extends React.Component {
             <LowBar />
           </div>
         </nav>
-      </React.Fragment>
+      </header>
     );
   }
 }
