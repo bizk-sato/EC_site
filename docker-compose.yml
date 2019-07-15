@@ -4,9 +4,12 @@ services:
     image: postgres
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
-  web:
+  web: &web
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: webpacker
+      WEBPACKER_DEV_SERVER_PUBLIC: 0.0.0.0:3035
     volumes:
       - .:/p_julia
     ports:
@@ -15,3 +18,11 @@ services:
       - db
     tty: true
     stdin_open: true
+  webpacker:
+    <<: *web
+    command: ./bin/webpack-dev-server
+    depends_on:
+      - web
+    ports:
+      - "3035:3035"
+

@@ -12,9 +12,17 @@
  *
  *= require_tree .
  *= require materialize
+ *= require material_icons
  *= require_self
  */
 @import "materialize/components/color-variables";
 $primary-color: color("blue", "lighten-2") !default;
 $secondary-color: color("yellow", "base") !default;
 @import "materialize";
+
+.badge-notify {
+  background:red;
+  position:relative;
+  top: 7px;
+  left: -62px;
+}
