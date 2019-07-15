@@ -10,15 +10,13 @@ class TopBar extends React.Component {
     return (
       <React.Fragment>
         <HamburgerContent />
-        <nav>
           <div className="nav-wrapper">
             <a href="#!" className="brand-logo">P.Julia</a>
-            <ul className="right hide-on-med-and-down">
+            <ul className="right">
               <li><Cart /></li>
               <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">Account<i className="material-icons right">arrow_drop_down</i></a></li>
             </ul>
           </div>
-        </nav>
       </React.Fragment>
     );
   }
@@ -28,7 +26,6 @@ function Cart() {
   return(
     <a href="#">
       <i className="material-icons">shopping_cart</i>
-      <span>2</span>
     </a>
   );
 }
