@@ -18,7 +18,6 @@
 #  index_products_on_category_id  (category_id)
 #
 
-
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do

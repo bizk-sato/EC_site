@@ -5,8 +5,11 @@ class LowBar extends React.Component {
     return (
           <div className="container">
             <div className="row">
-              <div className="col s4"><a className="waves-effect waves-light btn">Supplement</a></div>
-              <div className="col s4"><a className="waves-effect waves-light btn">Cosmetic</a></div>
+              {this.props.categories.map((category) =>
+                <div className="col s4" key={category.id} data-name={category.name} onClick={() => this.props.handleClick(category.name)}>
+                  <a className="waves-effect waves-light btn">{category.name}</a>
+                </div>
+                )}
               <div className="col s4"><a className="waves-effect waves-light btn">En/Vn</a></div>
             </div>
           </div>

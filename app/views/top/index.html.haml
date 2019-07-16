@@ -1,1 +1,2 @@
-= react_component('top/Index', items: Product.all.map(&:attributes))
+=# TODO: ページングの導入
+= react_component('top/Index', products: @products.map(&:attributes), categories: @categories.map(&:attributes))

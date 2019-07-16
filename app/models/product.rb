@@ -18,7 +18,28 @@
 #  index_products_on_category_id  (category_id)
 #
 
-
 class Product < ApplicationRecord
+  include Rails.application.routes.url_helpers
+
   belongs_to :category
+  has_one_attached :image
+
+  before_destroy :destroy_image
+
+  def image_url
+    image.attached? ? rails_blob_path(image, host: :localhost) : nil
+  end
+
+  # imageのurlを載せるためにoverride
+  def attributes
+    attr = super
+    attr[:image] = image_url
+    attr[:category] = category&.name
+    attr
+  end
+
+  private
+  def destroy_image
+    image.purge
+  end
 end

@@ -3,11 +3,13 @@ import PropTypes from "prop-types"
 
 class MainContent extends React.Component {
   render () {
+    let list = this.props.products.map((product) =>
+      <Card product={product} key={product.id} />
+    );
+
     return (
       <main>
-        {this.props.items.map((item) =>
-          <Card item={item} key={item.id} />
-        )}
+        {list}
       </main>
     );
   }
@@ -20,12 +22,12 @@ function Card(props) {
         <a href="#">
           <div className="card horizontal">
             <div className="card-image">
-              <img src="https://images-na.ssl-images-amazon.com/images/I/51aQGtXV0LL._SL1000_.jpg" />
+              <img src={props.product.image} />
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>{props.item.name}</p>
-                <p>{props.item.price}</p>
+                <p>{props.product.name}</p>
+                <p>{props.product.price}</p>
               </div>
             </div>
           </div>

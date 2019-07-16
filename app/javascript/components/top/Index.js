@@ -4,11 +4,27 @@ import Header from "./Header"
 import MainContent from "./MainContent"
 
 class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: props.products
+    };
+  }
+
+  handleClick = (val) => {
+    const list = this.props.products.filter((product) =>
+      product.category.indexOf(val) >= 0
+    );
+    this.setState({
+      products: list
+    });
+  }
+
   render () {
     return (
       <React.Fragment>
-        <Header />
-        <MainContent items={this.props.items}/>
+        <Header categories={this.props.categories} products={this.props.products} handleClick={this.handleClick} />
+        <MainContent products={this.state.products}/>
       </React.Fragment>
     );
   }

@@ -14,7 +14,7 @@ class Header extends React.Component {
           </div>
           <div className="nav-content">
             <MiddleBar />
-            <LowBar />
+            <LowBar categories={this.props.categories} products={this.props.products} handleClick={this.props.handleClick} />
           </div>
         </nav>
       </header>

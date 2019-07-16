@@ -18,7 +18,6 @@
 #  index_products_on_category_id  (category_id)
 #
 
-
 FactoryBot.define do
   factory :product do
     name { 'MyString' }

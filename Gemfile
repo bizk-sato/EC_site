@@ -45,6 +45,9 @@ gem 'materialize-sass', '~> 1.0.0'
 gem 'react-rails'
 gem 'webpacker', '~> 4.x'
 
+gem 'administrate'
+gem 'administrate-field-active_storage'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
