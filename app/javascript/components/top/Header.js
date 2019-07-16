@@ -13,8 +13,8 @@ class Header extends React.Component {
             <TopBar />
           </div>
           <div className="nav-content">
-            <MiddleBar />
-            <LowBar categories={this.props.categories} products={this.props.products} handleClick={this.props.handleClick} />
+            <MiddleBar searchUrl={this.props.searchUrl} csrfToken={this.props.csrfToken} />
+            <LowBar categories={this.props.categories} handleClick={this.props.handleClick} />
           </div>
         </nav>
       </header>

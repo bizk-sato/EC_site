@@ -26,6 +26,12 @@ class Product < ApplicationRecord
 
   before_destroy :destroy_image
 
+  # 商品名と部分一致、商品のカテゴリと部分一致
+  scope :by_name, ->(value) do
+    joins(:category)
+      .where('products.name LIKE ? OR categories.name LIKE ?', "%#{value}%", "%#{value}%")
+  end
+
   def image_url
     image.attached? ? rails_blob_path(image, host: :localhost) : nil
   end
@@ -39,6 +45,7 @@ class Product < ApplicationRecord
   end
 
   private
+
   def destroy_image
     image.purge
   end

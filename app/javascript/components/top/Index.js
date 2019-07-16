@@ -23,7 +23,12 @@ class Index extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <Header categories={this.props.categories} products={this.props.products} handleClick={this.handleClick} />
+        <Header
+          categories={this.props.categories}
+          searchUrl={this.props.searchUrl}
+          csrfToken={this.props.csrfToken}
+          handleClick={this.handleClick}
+        />
         <MainContent products={this.state.products}/>
       </React.Fragment>
     );

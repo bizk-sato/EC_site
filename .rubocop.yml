@@ -50,9 +50,16 @@ Documentation:
 AndOr:
   Enabled: false
 
+# RSpecでブロックの大量ネスティングを許可
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+
 AllCops:
   Exclude:
+    - app/dashboards/*
     - db/schema.rb
+    - db/migrate/*
     - tmp/**/*
     - node_modules/**/*
     - bin/**/*

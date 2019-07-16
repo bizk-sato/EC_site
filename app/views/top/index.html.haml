@@ -1,2 +1,13 @@
 =# TODO: ページングの導入
-= react_component('top/Index', products: @products.map(&:attributes), categories: @categories.map(&:attributes))
+- if @products.present?
+  = react_component('top/Index',
+      products: @products.map(&:attributes),
+      categories: @categories.map(&:attributes),
+      searchUrl: search_path,
+      csrfToken: form_authenticity_token)
+- else
+  = react_component('top/Header',
+      categories: @categories.map(&:attributes),
+      searchUrl: search_path,
+      csrfToken: form_authenticity_token)
+  %p= "could not find #{@search_word}.Please search with other words."
