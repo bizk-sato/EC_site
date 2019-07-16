@@ -18,7 +18,7 @@ class MainContent extends React.Component {
 function Card(props) {
   return(
     <div className="row">
-      <div className="col s6 m9 offset-l1">
+      <div className="col s8 m9 offset-l1">
         <a href="#">
           <div className="card horizontal">
             <div className="card-image">
@@ -26,8 +26,9 @@ function Card(props) {
             </div>
             <div className="card-stacked">
               <div className="card-content">
-                <p>{props.product.name}</p>
-                <p>{props.product.price}</p>
+                <h3 className="header-under-line">{props.product.name}</h3>
+                <p>{props.product.description}</p>
+                <p>{props.product.price.toLocaleString()}VND</p>
               </div>
             </div>
           </div>

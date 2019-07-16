@@ -1,0 +1,17 @@
+@import 'color';
+
+a {
+  color: black;
+}
+
+.badge-notify {
+  background:red;
+  position:relative;
+  top: 7px;
+  left: -62px;
+}
+
+.header-under-line {
+  margin-top: 0px;
+  border-bottom: double 5px $primary-color;
+}
