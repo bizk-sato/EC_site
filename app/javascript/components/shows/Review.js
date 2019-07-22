@@ -11,9 +11,9 @@ class Review extends React.Component {
       stars.push(<Star key={i} />)
     }
     return(
-      <div className="row">
+      <div className="row" key={review.id}>
         <div className="col s12 m12">
-          <li key={review.id}>
+          <li>
             <span>{stars}</span>
             <p>{review.comment}</p>
             <br />

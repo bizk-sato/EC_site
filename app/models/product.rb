@@ -47,7 +47,7 @@ class Product < ApplicationRecord
 
   def stars
     stars = reviews.map(&:stars)
-    stars.sum / stars.size
+    stars.present? ? stars.sum / stars.size : 0
   end
 
   private

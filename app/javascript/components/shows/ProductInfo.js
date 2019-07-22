@@ -4,11 +4,16 @@ import Star from './Star'
 
 class ProductInfo extends React.Component {
   reviews = () => {
-    let stars = []
-    for(let i = 0; i < this.props.stars; i++) {
-      stars.push(<Star key={i} />)
+    if(this.props.stars.length) {
+      let stars = []
+      for(let i = 0; i < this.props.stars; i++) {
+        stars.push(<Star key={i} />)
+      }
+      return stars
+
+    } else {
+      return 'no reviews yet'
     }
-    return stars
   }
 
   render () {

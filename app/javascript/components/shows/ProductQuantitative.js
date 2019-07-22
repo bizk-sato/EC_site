@@ -15,11 +15,11 @@ class ProductQuantitative extends React.Component {
 
 function Stock(props) {
   let stock = parseInt(props.product.stock)
-  if(stock < 1) {
+  if(stock == 0) {
     return <p><i className="material-icons yellow-text vertical-text-bottom">sentiment_very_dissatisfied</i><span>在庫なし</span></p>
-  } else if(stock < 3) {
+  } else if(stock > 0 && stock < 4) {
     return <p><i className="material-icons red-text vertical-text-bottom">sentiment_satisfied</i><span>在庫わずか</span></p>
-  } else if(stock > 4) {
+  } else if(stock >= 4) {
     return <p><i className="material-icons blue-text vertical-text-bottom">sentiment_very_satisfied</i><span>在庫あり</span></p>
   }
 }

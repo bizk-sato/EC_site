@@ -49,11 +49,14 @@ class Show extends React.Component {
                 <Description description={this.props.product.description} />
               </div>
             </div>
+           {
+            !!this.props.reviews.length &&
             <div className="card">
               <div className="card-content">
                 <Review reviews={this.props.reviews} />
               </div>
             </div>
+           }
           </div>
         </main>
       </React.Fragment>
