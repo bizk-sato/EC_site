@@ -10,7 +10,7 @@ class TopBar extends React.Component {
     return (
       <React.Fragment>
         <HamburgerContent />
-            <a href="#!" className="brand-logo">P.Julia</a>
+            <a href="/" className="brand-logo">EC</a>
             <ul className="right">
               <li><Cart /></li>
               <li><a className="dropdown-trigger" href="#!" data-target="dropdown1">Account<i className="material-icons right">arrow_drop_down</i></a></li>

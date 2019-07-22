@@ -27,6 +27,7 @@ class Index extends React.Component {
           categories={this.props.categories}
           searchUrl={this.props.searchUrl}
           csrfToken={this.props.csrfToken}
+          showLowBar={this.props.showLowBar}
           handleClick={this.handleClick}
         />
         <MainContent products={this.state.products}/>

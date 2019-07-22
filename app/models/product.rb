@@ -23,6 +23,7 @@ class Product < ApplicationRecord
 
   belongs_to :category
   has_one_attached :image
+  has_many :reviews
 
   before_destroy :destroy_image
 
@@ -42,6 +43,11 @@ class Product < ApplicationRecord
     attr[:image] = image_url
     attr[:category] = category&.name
     attr
+  end
+
+  def stars
+    stars = reviews.map(&:stars)
+    stars.sum / stars.size
   end
 
   private

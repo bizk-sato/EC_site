@@ -4,10 +4,12 @@
       products: @products.map(&:attributes),
       categories: @categories.map(&:attributes),
       searchUrl: search_path,
-      csrfToken: form_authenticity_token)
+      csrfToken: form_authenticity_token,
+      showLowBar: true)
 - else
   = react_component('top/Header',
       categories: @categories.map(&:attributes),
       searchUrl: search_path,
-      csrfToken: form_authenticity_token)
+      csrfToken: form_authenticity_token,
+      showLowBar: true)
   %p= "could not find #{@search_word}.Please search with other words."

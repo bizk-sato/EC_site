@@ -14,7 +14,7 @@ class Header extends React.Component {
           </div>
           <div className="nav-content">
             <MiddleBar searchUrl={this.props.searchUrl} csrfToken={this.props.csrfToken} />
-            <LowBar categories={this.props.categories} handleClick={this.props.handleClick} />
+            { this.props.showLowBar && <LowBar categories={this.props.categories} handleClick={this.props.handleClick} />}
           </div>
         </nav>
       </header>

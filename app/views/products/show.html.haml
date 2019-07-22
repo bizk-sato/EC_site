@@ -1,0 +1,7 @@
+= react_component('shows/Show',
+    searchUrl: search_path,
+    csrfToken: form_authenticity_token,
+    showLowBar: false,
+    product: @product.attributes,
+    reviews: @product.reviews.map(&:attributes),
+    stars: @stars )

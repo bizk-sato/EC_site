@@ -19,7 +19,7 @@ function Card(props) {
   return(
     <div className="row">
       <div className="col s8 m9 offset-l1">
-        <a href="#">
+        <a href={"/products/" + props.product.id }>
           <div className="card horizontal">
             <div className="card-image">
               <img src={props.product.image} />
