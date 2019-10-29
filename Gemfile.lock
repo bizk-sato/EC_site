@@ -175,7 +175,7 @@ GEM
       railties (>= 3.1)
     msgpack (1.3.0)
     nio4r (2.4.0)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     parallel (1.17.0)
     parser (2.6.3.0)
@@ -240,8 +240,6 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
-    react-rails-img (0.1.6)
-      react-rails
     regexp_parser (1.5.1)
     rspec-core (3.8.2)
       rspec-support (~> 3.8.0)
@@ -354,7 +352,6 @@ DEPENDENCIES
   rails-controller-testing
   rails-erd
   react-rails
-  react-rails-img
   rspec-rails (~> 3.8)
   rubocop
   sass-rails (~> 5.0)
