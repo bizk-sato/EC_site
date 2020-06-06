@@ -240,8 +240,6 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
-    react-rails-img (0.1.6)
-      react-rails
     regexp_parser (1.5.1)
     rspec-core (3.8.2)
       rspec-support (~> 3.8.0)
@@ -323,7 +321,7 @@ GEM
       railties (>= 4.2)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
+    websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -354,7 +352,6 @@ DEPENDENCIES
   rails-controller-testing
   rails-erd
   react-rails
-  react-rails-img
   rspec-rails (~> 3.8)
   rubocop
   sass-rails (~> 5.0)
